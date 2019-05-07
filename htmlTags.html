@@ -1,0 +1,75 @@
+<!-- CIT 261 HTML Tags page-->
+<html>
+    <head>
+        <title>CIT 261 Weekly Technology Topics</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="main.css" type="text/css" rel="stylesheet">
+    </head>
+<body>
+
+<ul id="navlist">
+<li id="active"><a href="index.html" id="current">Home</a></li>
+</ul>
+
+<h1>HTML5 Tags - Video, Audio, and Canvas</h1>
+<h3>This is a h3 tag.  Tags help style a web page</h3>
+<h4>YouTube video using iframe tag</h4>
+<p>I did not use autoplay for the video</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vfRlsBbD11c?rel=0&amp;start=10" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen autofocus></iframe><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/xFll6fIgRGQ?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h4>HTML5 Tags audio</h4>
+<p>Press play and start the song</p><br>
+    <p>Beautiful Savior</p>
+<audio controls="" autoplay>
+<source src="01%20Beautiful%20Savior%20copy.mp3" type="audio/mpeg">
+</audio>
+<br>
+    <p>Love Dance</p>
+    <audio controls="" loop>
+        <source src="1-11%20Love%20Dance.mp3" type="audio/mpeg">
+    </audio>
+    <br>
+
+<h4>Inspirational thought</h4>
+    <p class="town-article">
+        "The price of peace is righteousness.  Men and nations may loudly proclaim, 'Peace, peace,' but there shall be no peace until individuals nurture in their souls those principles of personal purity, integrity, and character which foster the development of peace.  Peace cannot be imposed.  It must come from the lives and hearts of men.  There is no other way." <br/>- Ezra Taft Benson <br/>
+    </p>
+
+<h4> HTML Tags Canvas</h4>
+<p>The "canvas" tag is used to draw graphical images.</p>
+
+<canvas id="CanvasColor"></canvas>
+<canvas id="CanvasColor2"></canvas>
+    <p>The black boxes above were created using a Javascript function</p>
+    <script src="canvas.js"></script>
+
+<script>
+
+
+var c1 = document.getElementById("CanvasColor");
+var cxt1 = c1.getContext("2d");
+
+var grt2 = cxt1.createLinearGradient(50,0,150,0);
+grt2.addColorStop(0,"green");
+grt2.addColorStop(0.3,"yellow");
+grt2.addColorStop(0.6,"blue");
+
+cxt1.fillStyle = grt2;
+cxt1.fillRect(50,50, 100, 50);
+var grt3 = cxt1.createLinearGradient(160,50,200,150);
+grt3.addColorStop(0.2,"black");
+grt3.addColorStop(0.4,"red");
+grt3.addColorStop(0.6,"black");
+cxt1.fillStyle = grt3;
+cxt1.fillRect(160,50, 100, 50);
+
+
+</script>
+    <footer>
+        <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 4 May 2019</p>
+    </footer>
+</body>
+</html>

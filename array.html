@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Loops, Conditional, functions, Variables, Parameters</title>
+
+        <h2>Array</h2>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="main.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <ul id="navlist">
+            <li id="active"><a href="index.html" id="current">Home</a></li>
+        </ul>
+        <p id="family"></p>
+        <script>
+            var names = ["Ryan", "Heather", "Lilly", "Kanyon", "Cole"];
+            var lengths = names.length;
+            for(var i=0; i < lengths; i++){
+                document.getElementById("family").innerHTML = names[i];
+            }
+        </script>
+
+
+        <h2>Associative Array</h2>
+        <p>The associative array using my name</p>
+        <p id="loopStatement"></p>
+        <script>
+            var txt = "";
+            var person = {firstName:"Ryan", lastName:"Weston", age:41};
+            var x;
+            for (x in person) {
+                txt += person[x] + " ";
+            }
+            document.getElementById("loopStatement").innerHTML = txt;
+        </script>
+
+
+        <h2>Loops</h2>
+        <p>The for/in statement loops through the properties of an object.</p>
+        <p id="loop"></p>
+        <script>
+            var txt = "";
+            var person = {firstName:"Ryan", lastName:"Weston", age:41};
+            var x;
+            for (x in person) {
+                txt += person[x] + " ";
+            }
+            document.getElementById("loop").innerHTML = txt;
+        </script>
+
+
+
+        <h2>Function</h2>
+        <p>Here is a simple function for computer names</p>
+        <p id="part1"></p>
+        <p id="part2"></p>
+
+        <script>
+            myFunction();
+            function myFunction() {
+                var pcName = "Apple";
+                document.getElementById("part1").innerHTML = typeof pcName + " " + pcName;
+            }
+            document.getElementById("part2").innerHTML = typeof pcName;
+        </script>
+        <footer>
+            <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 4 May 2019</p>
+        </footer>
+    </body>
+</html>
