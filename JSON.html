@@ -46,24 +46,7 @@ function change_myselect(sel) {
             <li id="active"><a href="index.html" id="current">Home</a></li>
         </ul>
 
-<h3>Example of using JSON and turning it into Javascript Objects</h3>
 
-<p id="jsonExample"></p>
-<b>Use of Javascript object :</b>
-<p id="json1"></p>
-
-<script>
-var information ='{ "name":"Brendan Eich","designerof":"Javascript","bornin":"1961" }';
-
-// Here we convert JSON to object
-var obj = JSON.parse(jsonobj);
-
-document.getElementById("json1").innerHTML =
-obj.name + ", who was born in "
-+ obj.bornin + ", was the designer of "
-+ obj.designerof;
-document.getElementById("jsonExample").innerHTML =information;
-</script>
         
 
         <p><h3>A simplified version of stringify</h3></p>        
