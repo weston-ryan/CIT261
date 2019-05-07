@@ -1,0 +1,37 @@
+<!-- CIT 261 HTML Tags page-->
+<html>
+    <head>
+        <title>CIT 261 Weekly Technology Topics</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="main.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+
+        <ul id="navlist">
+            <li id="active"><a href="index.html" id="current">Home</a></li>
+        </ul>
+
+<h3>Example of using JSON and turning it into Javascript Objects</h3>
+
+<p id="jsonExample"></p>
+<b>Use of Javascript object :</b>
+<p id="json1"></p>
+
+<script>
+var information ='{ "name":"Brendan Eich","designerof":"Javascript","bornin":"1961" }';
+
+// Here we convert JSON to object
+var obj = JSON.parse(jsonobj);
+
+document.getElementById("json1").innerHTML =
+obj.name + ", who was born in "
++ obj.bornin + ", was the designer of "
++ obj.designerof;
+document.getElementById("jsonExample").innerHTML =information;
+</script>
+        <footer>
+            <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 6 May 2019</p>
+        </footer>
+    </body>
+</html>
