@@ -1,0 +1,66 @@
+/* * is a wildcard referring to all elements. */
+* { margin: 10; box-sizing: border-box; }
+
+body {
+font-size: 16px;
+line-height: 32px;
+font-family: sans-serif;
+color: blue;
+}
+
+h1 {
+font-size: 28pt;
+color:forestgreen;
+}
+
+h2 {
+font-size: 20pt;
+text-align: center;
+border-bottom: 1px solid #bbb;
+}
+h3 {
+color:lightgreen;
+text-align: left;
+padding-left: 7em;
+}
+
+h4 {
+    color:lightgreen;
+    text-align: center;
+    padding-left: 7em;
+}
+
+h5 {
+    color:lightgreen;
+    text-align: center;
+    padding-left: 7em;
+}
+audio {
+    padding-left: 2em;
+}
+
+header, main, footer {
+margin: 1.25rem auto;
+padding: .5rem;
+max-width: 650px;
+}
+
+header, footer, footer a {
+text-align: center;
+background-color: lightgreen;
+color: black;
+}
+
+header img {
+width: 100;
+height: auto;
+float: right;
+}
+
+footer {
+font-size: 10pt;
+}
+
+Background {
+    color:azure;
+}
