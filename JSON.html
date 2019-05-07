@@ -64,6 +64,17 @@ obj.name + ", who was born in "
 + obj.designerof;
 document.getElementById("jsonExample").innerHTML =information;
 </script>
+        
+
+        <p><h3>A simplified version of stringify</h3></p>        
+<p id="stringify"></p>
+<p>JSON stringify is created above</p>
+<script>
+  var v = { "name":"Ryan Weston", "Student Year":3, "School":"BYU-Idaho"};
+  var newJSON = JSON.stringify(v);
+  document.getElementById("stringify").innerHTML = newJSON;
+</script>        
+        
         <footer>
             <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 6 May 2019</p>
         </footer>
