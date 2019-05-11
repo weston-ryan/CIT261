@@ -5,6 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="main.css" type="text/css" rel="stylesheet">
+
+
+
 </head>
 <body>
 <header>
@@ -12,13 +15,32 @@
 
 <h1>Ryan Weston</h1>
 
-
 </header>
 
+    <ul id="navlist">
+        <li id="active"><a href="index.html" id="current">Home</a></li>
+    </ul>
+    <script>
+        function clickCounter() {
+            if (typeof(Storage) !== "undefined") {
+                if (sessionStorage.clickcount) {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                } else {
+                    sessionStorage.clickcount = 1;
+                }
+                document.getElementById("result").innerHTML = "You have clicked the stupid button a total of  " + sessionStorage.clickcount + " time(s) in this session.";
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+    </script>
+    <h3>The counter increase with each click of the button</h3>
+    <p><button onclick="clickCounter()" type="button">Click me over and over!  Really!</button></p>
+    <div id="result"></div>
 
-<ul id="navlist">
-<li id="active"><a href="index.html" id="current">Home</a></li>
-</ul>
+    <h3>To reset the counter, close the tab or browser and <br>
+    then reopen this window.</h3><br>
+    <p>You may also try to "refresh" this page.  See what happens.</p>
 
 
 
