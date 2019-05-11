@@ -11,6 +11,12 @@
         <link href="main.css" type="text/css" rel="stylesheet">
     </head>
     <body>
+        <header>
+
+            <h1>Ryan Weston</h1>
+
+
+        </header>
         <ul id="navlist">
             <li id="active"><a href="index.html" id="current">Home</a></li>
         </ul>
@@ -29,12 +35,14 @@
         <p id="loopStatement"></p>
         <script>
             var txt = "";
-            var person = {firstName:"Ryan", lastName:"Weston", age:41};
+            var person = {firstName:"Ryan", lastName:"Weston", age:41, school:"BYU-Idaho"};
             var x;
             for (x in person) {
                 txt += person[x] + " ";
             }
             document.getElementById("loopStatement").innerHTML = txt;
+
+
         </script>
 
 
@@ -66,8 +74,19 @@
             }
             document.getElementById("part2").innerHTML = typeof pcName;
         </script>
+        <p>
+            myFunction();
+            function myFunction() {
+                var pcName = "Apple";
+                document.getElementById("part1").innerHTML = typeof pcName + " " + pcName;
+            }
+            document.getElementById("part2").innerHTML = typeof pcName;
+        </p>
+
+
+
         <footer>
-            <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 4 May 2019</p>
+            <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 11 May 2019</p>
         </footer>
     </body>
 </html>
