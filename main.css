@@ -39,16 +39,16 @@ h4 {
 h5 {
     color:lightgreen;
     text-align: center;
-    padding-left: 7em;
+    padding-left: 0em;
 }
 audio {
-    padding-left: 2em;
+    padding-left: 0em;
 }
 
 header, main, footer {
 margin: 1.25rem auto;
 padding: .5rem;
-max-width: 650px;
+max-width: 780px;
 }
 
 header, footer, footer a {
