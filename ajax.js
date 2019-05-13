@@ -22,7 +22,7 @@ console.log(info);
 
 //call the function responsible to display the data in the html page
 //fillHTMLelement(data);
-}
+
 var cityName = info.resourceSets[0].resources[0].name;
 var latitude = info.resourceSets[0].resources[0].point.coordinates[0];
 var longitude = info.resourceSets[0].resources[0].point.coordinates[1];
