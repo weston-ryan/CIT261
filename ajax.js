@@ -8,7 +8,7 @@ button.addEventListener('click',function(){
     var getMyData = new XMLHttpRequest();
 
     //establish the connection
-    getMyData.open('GET','http://dev.virtualearth.net/REST/v1/Locations?q=san%20francisco&output=json&key=AiHEmAatcY9KyySrdotAy9AkyhZqcGZegE9pRvecG25MQpbShbWNYGmj8YzmLBKj');
+    getMyData.open('GET','https://dev.virtualearth.net/REST/v1/Locations?q=san%20francisco&output=json&key=AiHEmAatcY9KyySrdotAy9AkyhZqcGZegE9pRvecG25MQpbShbWNYGmj8YzmLBKj');
 
     //if successfull, then continue
     getMyData.onload = function () {
