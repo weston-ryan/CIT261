@@ -19,7 +19,7 @@ button.addEventListener('click',function(){
        //print the parsed data into the console for debugging
         console.log(info);
 
-        //call the function responsible to display the data in the html page
+        // display the data in the html page
         var cityName = info.resourceSets[0].resources[0].name;
         document.getElementById('name').innerHTML = cityName;
 
