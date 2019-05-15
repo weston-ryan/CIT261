@@ -17,7 +17,7 @@
         </ul>
         <h2>DOM Manipulation Page</h2>
 
-<!-- ------------->
+<!-- Showing page url------------->
         <h3>Get the page URL</h3>
         <p>Clicking the button will display the URL of this web page</p>
         <p id="getLink"></p>
@@ -30,7 +30,7 @@
             }
         </script>
         <p>___________________________________________________________</p>
-<!-- ------------->
+<!--Adding/Removing elements ------------->
         <h3>Adding/Removing Elements</h3>
         <p>This part will keep adding a form input everytime you click the button "More input"</p>
         <p>It will also remove the input boxes by clicking "Number Five is Alive"</p>
@@ -53,25 +53,29 @@
                 document.addInputForm.removeChild(parent.firstChild);
             }
         </script>
-<!-- ------------->
+<!--Changing Elements ------------->
         <br>
         <p>___________________________________________________________</p>
         <h3>Changing Elements</h3>
-        <p>Clicking the button with change the button</p>
+        <p>Clicking the button will change the button</p>
         <input type="button" value="Don't Click Me" id="changeButton" onclick="changeButton()"/>
-        <script type="text/javascript">
+        <script>
             function changeButton(){
-                if (document.getElementById("changeButton").value == "Don't Click Me")
+                if (document.getElementById("changeButton").value == "Don't Click Me")document.getElementById("changeButton").style.color = "red",
                     document.getElementById("changeButton").value = "You just had to click me!";
                 else
-                    document.getElementById("changeButton").value = "Don't Click Me";
+                    document.getElementById("changeButton").value = "Don't Click Me",document.getElementById("changeButton").style.color = "blue";
             }
         </script>
-<!-- ------------->
+        <p>Clicking the button also will change the In-Line CSS</p>
+        <!--change the color of the button when you click it ------------->
+
+
+
+<!--  ------------->
 
 
         <footer>
             <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 14 May 2019</p>
         </footer>
     </body>
-</html>
