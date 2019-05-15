@@ -17,8 +17,57 @@
         </ul>
         <h2>DOM Manipulation Page</h2>
 
+<!-- ------------->
+        <h3>Get the page URL</h3>
+        <p>Clicking the button will display the URL of this web page</p>
+        <p id="getLink"></p>
+        <input type="button" value="Click here to get the URL" onclick="getURL()"/>
 
-
+        <script>
+            function getURL(){
+                var url = document.URL;
+                document.getElementById("getLink").innerHTML = url;
+            }
+        </script>
+        <p>___________________________________________________________</p>
+<!-- ------------->
+        <h3>Adding/Removing Elements</h3>
+        <p>This part will keep adding a form input everytime you click the button "More input"</p>
+        <p>It will also remove the input boxes by clicking "Number Five is Alive"</p>
+        <p>These also uses appendChild(element), and parent.firstChild) elements</p>
+        <form name="addInputForm">
+            <input type="text"/>
+        </form>
+        <input type="button" value="More input" onclick="createInput()"/>
+        <input type="button" value="Number Five is Alive" onclick="removeInput()"/>
+        <script type="text/javascript">
+        function createInput(){
+        // Create the input
+        var input = document.createElement("INPUT");
+        document.addInputForm.appendChild(input);
+            }
+        </script>
+        <script type="text/javascript">
+            function removeInput(){
+                var parent = document.addInputForm;
+                document.addInputForm.removeChild(parent.firstChild);
+            }
+        </script>
+<!-- ------------->
+        <br>
+        <p>___________________________________________________________</p>
+        <h3>Changing Elements</h3>
+        <p>Clicking the button with change the button</p>
+        <input type="button" value="Don't Click Me" id="changeButton" onclick="changeButton()"/>
+        <script type="text/javascript">
+            function changeButton(){
+                if (document.getElementById("changeButton").value == "Don't Click Me")
+                    document.getElementById("changeButton").value = "You just had to click me!";
+                else
+                    document.getElementById("changeButton").value = "Don't Click Me";
+            }
+        </script>
+<!-- ------------->
 
 
         <footer>
