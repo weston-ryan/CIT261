@@ -21,7 +21,7 @@
         <h3>Get the page URL</h3>
         <p>Clicking the button will display the URL of this web page</p>
         <p id="getLink"></p>
-        <input type="button" value="Click here to get the URL" onclick="getURL()"/>
+        <button type="button" value="Click here to get the URL" onclick="getURL()">Click here to get the URL</button>
 
         <script>
             function getURL(){
@@ -30,16 +30,19 @@
             }
         </script>
         <p>___________________________________________________________</p>
+
+
 <!--Adding/Removing elements ------------->
-        <h3>Adding/Removing Elements</h3>
+        <h3>Adding/Removing/Inserting Elements</h3>
         <p>This part will keep adding a form input everytime you click the button "More input"</p>
         <p>It will also remove the input boxes by clicking "Number Five is Alive"</p>
         <p>These also uses appendChild(element), and parent.firstChild) elements</p>
+        <p>You can also actually insert values into the input fields</p>
         <form name="addInputForm">
             <input type="text"/>
         </form>
-        <input type="button" value="More input" onclick="createInput()"/>
-        <input type="button" value="Number Five is Alive" onclick="removeInput()"/>
+        <button type="button" value="More input" onclick="createInput()">More Input</button>
+        <button type="button" value="Number Five is Alive" onclick="removeInput()">Number Five is Alive</button>
         <script type="text/javascript">
         function createInput(){
         // Create the input
@@ -47,10 +50,27 @@
         document.addInputForm.appendChild(input);
             }
         </script>
+
+        <p>Here, we will move an item using the insert before function</p>
         <script type="text/javascript">
             function removeInput(){
                 var parent = document.addInputForm;
                 document.addInputForm.removeChild(parent.firstChild);
+            }
+        </script>
+        <ul id="myClass1"><li>CIT 361</li><li>CIT 380</li><li>CIT 495</li></ul>
+
+        <ul id="myClass2"><li>REL 211</li><li>CIT 381</li></ul>
+
+
+
+        <button onclick="myInsertBefore()">Change Class Order</button>
+
+        <script>
+            function myInsertBefore() {
+                var node = document.getElementById("myClass2").lastChild;
+                var list = document.getElementById("myClass1");
+                list.insertBefore(node, list.childNodes[0]);
             }
         </script>
 <!--Changing Elements ------------->
@@ -79,3 +99,4 @@
             <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 14 May 2019</p>
         </footer>
     </body>
+</html>
