@@ -16,9 +16,94 @@
             <li id="active"><a href="index.html" id="current">Home - Assignment Portal</a></li>
         </ul>
         <h2>Java Object Creation Functions Page</h2>
+<!--  --------------------->
+        <h3>Object Creation</h3>
+        <!--  function to create an object-->
+        <script>
+            function createMower(){
+                var mower = {
+                    bodyColor: document.getElementById("body").value
+                    , style: document.mower.style.value
+                };
+
+                document.getElementById("Display Mower").innerHTML = "The lawn Mower color will be " + mower.bodyColor + " with the brand selected";
+            }
+        </script>
+        <h2> Create a Mower: </h2>
+        <p id="Display Mower"></p>
+        <form name="mower">
+            <label>Mower Color:</label>
+            <input type="text" id="body" name="body" placeholder="Enter color"/><br>
+            <label>Brand</label>
+            <select id="make" name="style">
+                <option value="JohnDeere">John Deere</option>
+                <option value="Case">Case</option>
+                <option value="LP">Lawn Pro</option>
+                <option value="TB">Troy Built</option>
+                <option value="Hus">Husqvarna</option>
+                <option value="CC">Cub Cadet</option>
+                <option value="Honda">Honda</option>
+                <option value="Craftsman">Craftsman</option>
+            </select><br>
+            <button type="button" value="submit" onclick="createMower()">Create The Perfect Mower</button>
+        </form>
+<!--  --------------------->
+        <h3>Properties</h3>
+        <p>Properties are values associated with JS objects</p>
+        <p>Properties can be added, deleted, or modified.  Some can be read only like this line</p>
+            <section>
+                <article>
+            <ul>
+                <li><input type="checkbox"/>Check the box to select a property</li>
+            <li><input type="checkbox" />Check another box to select another property</li>
+                    </ul></article>
+            </section>
 
 
+           <p> Properties are also similar to arrays because you can store multiple values in one variable.
 
+            <p id="loopStatement"></p>
+            <script>
+                var txt = "";
+            var person = {firstName:"Ryan", lastName:"Weston", age:41, school:"BYU-Idaho"};
+            var x;
+            for (x in person) {
+                txt += person[x] + " ";
+            }
+            document.getElementById("loopStatement").innerHTML = txt;
+        </script>
+
+<!--  --------------------->
+        <h3>Method</h3>
+        <p>A method is an action that can be performed on an object and contains a function definition.</p>
+        <p><img src="property.jpg" width="550" height="190" alt="Method example"></p>
+        <p id="method"></p>
+
+        <script>
+            var person = {
+                firstName: "Ryan",
+                lastName : "Weston",
+                iNumber     : 94516935,
+                fullName : function() {
+                    return this.firstName + " " + this.lastName + this.iNumber;
+                }
+            };
+
+            document.getElementById("method").innerHTML = person.fullName;
+        </script>
+
+
+<!--  --------------------->
+        <h3>Instantiation</h3>
+        <p>Instantiation is a way to create an object using functions like above.</p>
+        <p>var txt = "";<br>
+            var person = {firstName:"Ryan", lastName:"Weston", age:41, school:"BYU-Idaho"};<br>
+            var x;<br>
+            for (x in person) {<br>
+            txt += person[x] + " ";<br>
+            }<br>
+            document.getElementById("loopStatement").innerHTML = txt;</p><br>
+<!--  --------------------->
 
         <footer>
             <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 11 May 2019</p>
