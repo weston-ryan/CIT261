@@ -1,0 +1,190 @@
+/* * is a wildcard referring to all elements. */
+* {
+    margin: 10;
+    box-sizing: border-box;
+}
+
+active {
+    text-align: center;
+}
+
+body {
+    font-size: 16px;
+    line-height: 32px;
+    font-family: sans-serif;
+    color: blue;
+    background-color: cornsilk;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28pt;
+    color: forestgreen;
+}
+
+h2 {
+    font-size: 20pt;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+}
+
+h3 {
+    color: lightgreen;
+    text-align: center;
+    padding-left: 0em;
+}
+
+h4 {
+    color: lightgreen;
+    text-align: center;
+    padding-left: 0em;
+}
+
+h5 {
+    color: lightgreen;
+    text-align: center;
+    padding-left: 0em;
+}
+
+audio {
+    padding-left: 0em;
+}
+
+header,
+main,
+footer {
+    margin: 1.25rem auto;
+    padding: .5rem;
+    max-width: 780px;
+}
+
+header,
+footer,
+footer a {
+    text-align: center;
+    background-color: lightgreen;
+    color: black;
+}
+
+header img {
+    width: 100;
+    height: auto;
+    float: right;
+}
+
+.box {
+    border-radius: 5px;
+    background-color: #eee;
+    padding: 20px 5px;
+}
+
+button {
+    color: white;
+    background-color: green;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #4791d0;
+    padding: 5px 10px 8px 10px;
+    box-shadow: 1px 0px 1px #203891, 0px 1px 1px #3852b1, 2px 1px 1px #203891, 1px 2px 1px #3852b1, 3px 2px 1px #203891, 2px 3px 1px #3852b1, 4px 3px 1px #203891, 3px 4px 1px #3852b1, 5px 4px 1px #203891, 4px 5px 1px #3852b1, 6px 5px 1px #203891;
+}
+
+button:active {
+    box-shadow: 1px 0px 1px #203891, 0px 1px 1px #3852b1, 2px 1px 1px #203891, 1px 2px 1px #3852b1, 3px 2px 1px #203891;
+    transform: translate(3px, 3px);
+}
+
+button:hover {
+    background-color: lightgreen;
+    border: 1px solid #0F5897;
+}
+
+footer {
+    font-size: 10pt;
+}
+
+Background {
+    color: azure;
+}
+
+/* Hover Portion */
+
+#myHover {
+    border: 1px solid darkgreen;
+    border-style: groove;
+    background-color: wheat;
+    text-align: center;
+    width: 270px;
+    height: 200px;
+    overflow: auto;
+    -webkit-transition: all 2s;
+    /* Safari 3.1 to 6.0 */
+    transition: all 2s;
+    border-radius: 20px;
+}
+
+#myHover:hover {
+    background-color: mediumblue;
+    text-align: center;
+    width: 570px;
+    height: 500px;
+    padding: 100px;
+    border-radius: 600px;
+}
+
+/* annimate portion */
+#animated_div {
+    width: 150px;
+    height: 47px;
+    background: wheat;
+    color: #ffffff;
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    animation: animated_div 5s infinite ease;
+    -moz-animation: animated_div 5s infinite ease;
+    -webkit-animation: animated_div 5s infinite ease;
+    -o-animation: animated_div 5s infinite ease;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+@-webkit-keyframes animated_div {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 200px;
+    }
+}
+
+@keyframes animated_div {
+    from {
+        left: 0px;
+        background-color: wheat;
+    }
+
+    to {
+        left: 800px;
+        background-color: green;
+    }
+
+
+
+ /* trigger portion */
+button#jump {
+    float: left;
+    max-width: 30%;
+    -webkit-transition-property: float;
+    /* Safari */
+    -webkit-transition-duration: 2s;
+    /* Safari */
+    transition-property: float;
+    transition-duration: 2s;
+}
+
+button#jump:active {
+    float: right;
+    clear: bottom;
+}
