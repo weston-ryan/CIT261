@@ -1,0 +1,118 @@
+/* * is a wildcard referring to all elements. */
+* {
+margin: 10;
+box-sizing: border-box;
+}
+
+active {
+text-align: center;
+}
+
+body {
+font-size: 16px;
+line-height: 32px;
+font-family: sans-serif;
+color: blue;
+background-color: cornsilk;
+text-align: center;
+}
+
+h1 {
+font-size: 28pt;
+color: forestgreen;
+}
+
+h2 {
+font-size: 20pt;
+text-align: center;
+border-bottom: 1px solid #bbb;
+}
+
+h3 {
+color: lightgreen;
+text-align: center;
+padding-left: 0em;
+}
+
+h4 {
+color: lightgreen;
+text-align: center;
+padding-left: 0em;
+}
+
+h5 {
+color: lightgreen;
+text-align: center;
+padding-left: 0em;
+}
+
+audio {
+padding-left: 0em;
+}
+
+header,
+main,
+footer {
+margin: 1.25rem auto;
+padding: .5rem;
+max-width: 780px;
+}
+
+header,
+footer,
+footer a {
+text-align: center;
+background-color: lightgreen;
+color: black;
+}
+
+header img {
+width: 100;
+height: auto;
+float: right;
+}
+
+.box {
+border-radius: 5px;
+background-color: #eee;
+padding: 20px 5px;
+}
+
+button {
+color: white;
+background-color: green;
+text-align: center;
+border-radius: 5px;
+border: 1px solid #4791d0;
+padding: 5px 10px 8px 10px;
+box-shadow: 1px 0px 1px #203891, 0px 1px 1px #3852b1, 2px 1px 1px #203891, 1px 2px 1px #3852b1, 3px 2px 1px #203891, 2px 3px 1px #3852b1, 4px 3px 1px #203891, 3px 4px 1px #3852b1, 5px 4px 1px #203891, 4px 5px 1px #3852b1, 6px 5px 1px #203891;
+}
+
+button:active {
+box-shadow: 1px 0px 1px #203891, 0px 1px 1px #3852b1, 2px 1px 1px #203891, 1px 2px 1px #3852b1, 3px 2px 1px #203891;
+transform: translate(3px, 3px);
+}
+
+button:hover {
+background-color: lightgreen;
+border: 1px solid #0F5897;
+}
+
+footer {
+font-size: 10pt;
+}
+
+Background {
+color: azure;
+}
+
+/* Menipulating CSS using js */
+#square {
+    width: 20em;
+    height: 20em;
+    border: 2px inset gray;
+    margin-bottom: 1em;
+}
+button {
+    padding: .5em 2em;
+}
