@@ -149,6 +149,9 @@ Background {
     -webkit-border-radius: 5px;
 }
 
+
+/* Animated Property with "Animation" Button moving */
+
 @-webkit-keyframes animated_div {
     from {
         left: 0px;
@@ -188,3 +191,4 @@ button#jump:active {
     float: right;
     clear: bottom;
 }
+
