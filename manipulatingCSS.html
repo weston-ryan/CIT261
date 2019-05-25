@@ -1,11 +1,12 @@
 <!-- CIT 261 Manipulating CSS Class Properties page-->
 <html>
 <head>
-    <title>CIT 261 Manipulating CSS Class Properties page</title>
+    <title>CIT 261 Topic 7 - Manipulating CSS Class Properties page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="topic7.css" type="text/css" rel="stylesheet">
-<spript type="text/javascript" src="topic7.js"></spript>
+<script type="text/javascript" src="topic7.js"></script>
+
 </head>
 <body>
 <header>
@@ -16,20 +17,22 @@
 <ul id="navlist">
 <li id="active"><a href="index.html" id="current">Home - Assignment Portal</a></li>
 </ul>
-    <h2>Manipulating CSS Class Properties page</h2>
+    <h2>Topic 7 - Manipulating CSS Class Properties page</h2>
+    <h3>Using an event Listener</h3>
+    <p>Clicking the button will trigger an event to change the box color.</p>
 
     <div id="square"></div>
 
-    <button type="button" id="clickMe">Click Me</button>
+    <button type="button" id="clickMe">Click Me To Manipulate CSS</button>
 
 
 
 
 
-    <!--This part works when it is in the html, but not when it is in the js file.  -->
+    <!--This part works when it is in the html, but not when it is in the js file.-->
 <script>
     var square = document.getElementById("square"),
-        clickMe = document.getElementById('clickMe'); //Keeping it unobstrusive
+        clickMe = document.getElementById('clickMe');
     function runManip () {
 
         var button = this;
@@ -40,15 +43,15 @@
 
     function clearDemo (button) {
         var square = document.getElementById("square");
-        square.style.backgroundColor = "transparent";
+        square.style.backgroundColor = "lightgreen";
         button.removeAttribute("disabled");
-    }
+}
 
-    clickMe.onclick = runManip; //Onclick call. Pass no arguments.</script>
+    clickMe.onclick = runManip; </script>
 
 
 <footer>
-<p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 11 May 2019</p>
+<p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 20 May 2019</p>
 </footer>
 </body>
 </html>
