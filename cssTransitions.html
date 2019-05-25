@@ -5,11 +5,13 @@
     <title>CIT 261 CSS Transitions and Animations page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="topic8css.css" type="text/css" rel="stylesheet">
+  <link href="topic8css.css" type="text/css" rel="stylesheet">
+
 
 </head>
 
 <body>
+
     <header>
         <h1>Ryan Weston</h1>
 
@@ -20,13 +22,17 @@
     </ul>
     <h2>CSS Transitions and Animations page</h2>
 
-
     <h3>The Transition Property</h3>
-    <p>Hover your mouse over the box, and it will change, both in size, color, and shape!</p>
+    <p id="textChange" onmousedown="mouseDown()" onmouseup="mouseUp()">
+        Click the text to see how the mouseDown() function is triggered. Clicking the text sets the color of the text to pink. The mouseUp() function is triggered when the mouse button is released, and sets the color to green.
+    </p>
+
+    <h3>Transition Property Hover</h3>
+    <p>Hover your mouse over the tan colored box, and it will change, both in size, color, and shape!</p>
 
     <p>Hover over the button, and it will only change color, not size, not shape.</p>
 
-    <button onclick="myFunction()">My Button</button>
+    <button onclick="myFunction();">My Button</button>
 
     <div id="myHover">
         <h1>Hover over me</h1>
@@ -41,28 +47,12 @@
     <div id="animated_div">Animation</div>
 
     <h3>The Trigger Property</h3>
-    <p>Click the button to see the change within css</p>
-    <div id="message"></div>
-    <button id="jump" type="button" value="click">Push my Button</button>
-
-
 
     <p>Press the button to trigger the Alert or enter text and press Enter </p>
     <input id="myInput" value="Some text & press enter">
     <button id="myBtn" onclick="javascript:alert('You triggered the Alert!  You shall receive blessings from above!')">Click here to trigger alert</button>
 
-    <!-- if I put this script in here... it works, but if I remove it and try to use the topic8css.js file, then it does not work -->
-
-    <script>
-        var input = document.getElementById("myInput");
-        input.addEventListener("keyup", function(event) {
-            if (event.keyCode === 13) {
-                event.preventDefault();
-                document.getElementById("myBtn").click();
-            }
-        });
-    </script>
-<!-- to flip an image -->
+    <!-- to flip an image -->
     <style>
         img:hover {
             -webkit-transform: scaleX(-1);
@@ -73,10 +63,15 @@
     <p>Hover over the image.</p>
 
     <img src="weatherPine.jpg" alt="Weather Pine" width="800" height="175">
+
+
+
+
+
     <footer>
         <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 20 May 2019</p>
     </footer>
-    <script src="topic8css.css"></script>
+    <script src="topic8css.js"></script>
 </body>
 
 </html>
