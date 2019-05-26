@@ -1,17 +1,29 @@
 var square = document.getElementById("square"),
-clickMe = document.getElementById('clickMe'); //Keeping it unobstrusive
-function doDemo () {
+    clickMe = document.getElementById('clickMe');
 
-var button = this;
-square.style.backgroundColor = "#fa4";
-button.setAttribute("disabled", "true");
-setTimeout(clearDemo, 2000, button);
+//when clicked turn it red
+function runManip () {
+
+    var button = this;
+    square.style.backgroundColor = "red";
+    button.setAttribute("disabled", "true");
+    setTimeout(clearDemo, 1000, button);
 }
 
+//after turning it red, default back to light green.
 function clearDemo (button) {
-var square = document.getElementById("square");
-square.style.backgroundColor = "transparent";
-button.removeAttribute("disabled");
+    var square = document.getElementById("square");
+    square.style.backgroundColor = "lightgreen";
+    button.removeAttribute("disabled");
 }
 
-clickMe.onclick = doDemo; //Onclick call. Pass no arguments.
+clickMe.onclick = runManip;
+
+
+
+//change the background image to eggshell if can't find image, otherwise tile image
+    function backgroundChange() {
+    document.body.style.backgroundColor = "#f3f3f3";
+    document.body.style.backgroundImage = "url('weatherPine.jpg')";
+}
+
