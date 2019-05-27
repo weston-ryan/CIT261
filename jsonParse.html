@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="main.css" type="text/css" rel="stylesheet">
+
 </head>
 <body>
 <header>
@@ -15,14 +16,48 @@
 <ul id="navlist">
 <li id="active"><a href="index.html" id="current">Home - Assignment Portal</a></li>
 </ul>
+
+
+
 <h2>JSON Parse, Stringify Page</h2>
 
 
 
+    <h3>XMLHttpRequest to get JSON file</h3>
+    <p>The content is written in JSON format.</p>
+    <p>This can be converted into an object very easily</p>
+
+    <p id="jsonParse"></p>
+
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myJSONParse = JSON.parse(this.responseText);
+                document.getElementById("jsonParse").innerHTML = myJSONParse.name;
+            }
+        };
+        xmlhttp.open("GET", "json_file.txt", true);
+        xmlhttp.send();
+    </script>
+    <p>Click on this link to run the example <a href="json_file.txt" target="_blank">JSON File Example using Parse</a></p>
+
+    <h3>JSON Stringify</h3>
+    <p>Here the above file is converted to an object using stringify</p>
+
+    <p id="jsonStringify"></p>
+
+    <script>
+        var obj = { "name":"Ryan Weston", "age":"41", "school":"Evanston High School", "school":"Utah State University", "school":"Brigham Young University Idaho" };
+        var text = JSON.stringify(obj, null);
+        document.getElementById("jsonStringify").innerHTML = text;
+    </script>
+    <font color="green"><p>I learned I had to adjust the object to print correctly.  The "name" threw things off.<br> I didn't realize it would loop through it like it did.  That was neat to learn!</p></font>
+
 
 
 <footer>
-<p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 11 May 2019</p>
+<p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 27 May 2019</p>
 </footer>
 </body>
 </html>
