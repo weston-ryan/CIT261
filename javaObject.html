@@ -139,6 +139,34 @@
                 "dateObject: " + typeof dateObject + "<br>";
         </script>
 
+        
+        <!-- Here is the Inheritance  portion -->
+        <h3><font color="red">Object Inheritance </font></h3>
+        <style>
+            span {
+                color: blue;
+                padding: 5px;
+                border: 2px solid green;
+            }
+
+            .extra span {
+                color: inherit;
+            }
+        </style>
+
+
+        <div>
+            Here is <span>object element</span> which is blue, and set to be blue.
+        </div>
+
+        <div class="extra" style="color:purple">
+            Here is <span>object element</span> which is purple, because it inherits from its parent.
+        </div>
+
+        <div style="color:red">
+            Here is <span>object element</span> which is blue, because the span element is set to blue, and the sentence set to red.
+        </div>
+
         <footer>
             <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 27 May 2019</p>
         </footer>
