@@ -17,7 +17,7 @@
         </ul>
         <h2>Java Object Creation Functions Page</h2>
 <!--  --------------------->
-        <h3>Object Creation</h3>
+        <h3><font color="red">Object Creation Changes in Red Since Last Submission</font></h3>
         <!--  function to create an object-->
         <script>
             function createMower(){
@@ -29,7 +29,7 @@
                 document.getElementById("Display Mower").innerHTML = "The lawn Mower color will be " + mower.bodyColor + " with the brand selected";
             }
         </script>
-        <h2> Create a Mower: </h2>
+        <h2> Create a Mower Object: </h2>
         <p id="Display Mower"></p>
         <form name="mower">
             <label>Mower Color:</label>
@@ -105,8 +105,42 @@
             document.getElementById("loopStatement").innerHTML = txt;</p><br>
 <!--  --------------------->
 
+        <!--  Different ways to create new objects--------------------->
+        <h3><font color="red">Different Object Type Creation</font></h3>
+        <p id="objectCreate"></p>
+
+        <script>
+            // A new Object object
+            var objectObject = new Object();
+            // A new String object
+            var stringObject = new String();
+            // A new Number object
+            var numberObject = new Number();
+            // A new Boolean object
+            var booleanObject = new Boolean();
+            // A new Array object
+            var arrayObject = new Array();
+            // A new RegExp object
+            var regExpressionObject = new RegExp();
+            // A new Function object
+            var functionObject = new Function();
+            // A new Date object
+            var dateObject = new Date();
+
+            // Display all of the objects
+            document.getElementById("objectCreate").innerHTML =
+                "objectObject: " + typeof objectObject + "<br>" +
+                "stringObject: " + typeof stringObject + "<br>" +
+                "numberObject: " + typeof numberObject + "<br>" +
+                "booleanObject: " + typeof booleanObject + "<br>" +
+                "arrayObject: " + typeof arrayObject + "<br>" +
+                "regExpressionObject: " + typeof regExpressionObject + "<br>" +
+                "functionObject: " + typeof functionObject + "<br>" +
+                "dateObject: " + typeof dateObject + "<br>";
+        </script>
+
         <footer>
-            <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 18 May 2019</p>
+            <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 27 May 2019</p>
         </footer>
     </body>
 </html>
