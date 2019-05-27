@@ -53,16 +53,19 @@
             x.addEventListener("animationiteration", myRepeatFunction);
             x.addEventListener("animationend", myEndFunction);
 
+            // this is the first animation function to run when first touched
             function myStartFunction() {
                 this.innerHTML = "animationstart event occured - You have started the annimation";
                 this.style.backgroundColor = "lightgreen";
             }
 
+            // this is the second animation function to rerun after the first has run
             function myRepeatFunction() {
                 this.innerHTML = "animationiteration event occured - The animation was played again";
                 this.style.backgroundColor = "teal";
             }
 
+            // this is the final function, to "end" the animation
             function myEndFunction() {
                 this.innerHTML = "animationend event occured - The animation has finished";
                 this.style.backgroundColor = "red";
