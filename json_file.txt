@@ -1,0 +1,10 @@
+{
+Pulling a text file using json
+"name":"Ryan Weston",
+"age":41,
+"Schools:[
+{ "school":"Evanston", "name":"Evanston High School" },
+{ "school":"USU", "name":"Utah State University" },
+{ "school":"BYU-I", "name":"Brigham Young University Idaho" }
+]
+}
