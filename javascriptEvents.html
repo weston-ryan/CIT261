@@ -24,8 +24,22 @@
         <p ontouchstart="touchFunction()">Touch this sentence to trigger a function that will display another sentence recognizing the touch.</p>
 
 
-
         <p id="touchIt"></p>
+
+        <h3>Date and Time Touch</h3>
+        <p>If you would like to see the current date and time, check this out!</p>
+        <div id="timeTouch" ontouchstart="displayDate()"><font color="red">Touch here to display the date and time</font></div>
+
+        <script>
+            function displayDate() {
+                document.getElementById("timeTouch").innerHTML = Date();
+            }
+        </script>
+
+        <p id="timeTouch"></p>
+
+
+
 
 <h3>OnTouchStart Animation</h3>
         <p>This example uses onTouchStart to run the annimation.  It will move and change colors.</p>
