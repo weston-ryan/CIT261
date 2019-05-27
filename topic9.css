@@ -90,7 +90,8 @@ color:azure;
 
 /* The animated Touch box */
 #animatedTouch {
-    margin: 25px;
+    align-content: center;
+    margin: 50px;
     width: 550px;
     height: 100px;
     color: white;
