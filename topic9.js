@@ -1,3 +1,3 @@
 function touchFunction() {
-document.getElementById("touchIt").innerHTML = "You touched the paragraph, and it triggered the function!";
+document.getElementById("touchIt").innerHTML = "It worked!  You touched the paragraph, and it triggered the function!";
 }
