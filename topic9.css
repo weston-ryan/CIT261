@@ -45,13 +45,13 @@ audio {
 padding-left: 0em;
 }
 
-header, main, footer {
+header, main, footer, div, script {
 margin: 1.25rem auto;
 padding: .5rem;
 max-width: 780px;
 }
 
-header, footer, footer a {
+header, footer, div {
 text-align: center;
 background-color: lightgreen;
 color: black;
@@ -90,9 +90,10 @@ color:azure;
 
 /* The animated Touch box */
 #animatedTouch {
+
     align-content: center;
     margin: 50px;
-    width: 550px;
+    width: 500px;
     height: 100px;
     color: white;
     background: blue;
@@ -109,4 +110,34 @@ color:azure;
 @keyframes mymove {
     from {top: 0px;}
     to {top: 200px;}
+}
+
+
+/* Touch Portion */
+.swap {
+    background-image: url('BYUI2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 10em;
+
+}
+
+.swap a {
+    display: block;
+
+}
+
+.swap  a img {
+    opacity: 1;
+    width: 300px;
+    height: auto;
+    display: block;
+    transition: all 0.6s ease-in-out;
+
+}
+
+.swap a:hover img {
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
 }
