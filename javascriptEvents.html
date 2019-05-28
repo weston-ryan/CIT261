@@ -1,93 +1,114 @@
 <!-- CIT 261 JavaScript Events page-->
 <html>
-    <head>
-        <title>CIT 261 JavaScript Events page</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="topic9.css" type="text/css" rel="stylesheet">
-        <script src="topic9.js"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Ryan Weston</h1>
 
-        </header>
+<head>
+    <title>CIT 261 JavaScript Events page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="topic9.css" type="text/css" rel="stylesheet">
+    <script src="topic9.js"></script>
+</head>
 
-        <ul id="navlist">
-            <li id="active"><a href="index.html" id="current">Home - Assignment Portal</a></li>
-        </ul>
-        <h2>JavaScript Events page</h2>
+<body>
+    <header>
+        <h1>Ryan Weston</h1>
 
-        <h3>JavaScript Events onTouchStart</h3>
-        <h4>This will only work on touch devices.</h4>
+    </header>
 
-        <p ontouchstart="touchFunction()">Touch this sentence to trigger a function that will display another sentence recognizing the touch.</p>
+    <ul id="navlist">
+        <li id="active"><a href="index.html" id="current">Home - Assignment Portal</a></li>
+    </ul>
+    <h2>JavaScript Events page</h2>
 
+    <h3>JavaScript Events onTouchStart</h3>
+    <h4>This will only work on touch devices.</h4>
 
-        <p id="touchIt"></p><br><br>
-
-        <h3>Date and Time Touch</h3>
-        <p>If you would like to see the current date and time, check this out!</p>
-        <div id="timeTouch" ontouchstart="displayDate()"><font color="red">Touch here to display the date and time</font></div>
-
-        <script>
-            function displayDate() {
-                document.getElementById("timeTouch").innerHTML = Date();
-            }
-        </script>
-
-        <p id="timeTouch"></p><br><br>
+    <p ontouchstart="touchFunction()">Touch this sentence to trigger a function that will display another sentence recognizing the touch.</p>
 
 
+    <p id="touchIt"></p><br><br>
+
+    <h3>Date and Time Touch</h3>
+    <p>If you would like to see the current date and time, check this out!</p>
+    <div id="timeTouch" ontouchstart="displayDate()">
+        <font color="red">Touch here to display the date and time</font>
+    </div>
+
+    <script>
+        function displayDate() {
+            document.getElementById("timeTouch").innerHTML = Date();
+        }
+    </script>
+
+    <p id="timeTouch"></p><br><br>
 
 
-<h3>OnTouchStart Animation</h3>
-        <p>This example uses onTouchStart to run the annimation.  It will move and change colors.</p>
 
-        <div id="animatedTouch" ontouchstart="animatedTouchFunction()">Touch me to start the animation.</div>
 
-        <script>
-            var x = document.getElementById("animatedTouch");
+    <h3>OnTouchStart Animation</h3>
+    <p>This example uses onTouchStart to run the annimation. It will move and change colors.</p>
 
-            // Start the animation with JavaScript
-            function animatedTouchFunction() {
-                x.style.WebkitAnimation = "mymove 4s 2";
-                // Code for Chrome, Safari and Opera
-                x.style.animation = "mymove 4s 2";
-                // Standard syntax
-            }
+    <div id="animatedTouch" ontouchstart="animatedTouchFunction()">Touch me to start the animation.</div>
 
+    <script>
+        var touchAnimate = document.getElementById("animatedTouch");
+
+        // Start the animation with JavaScript
+        function animatedTouchFunction() {
+            touchAnimate.style.WebkitAnimation = "mymove 4s 2";
             // Code for Chrome, Safari and Opera
-            x.addEventListener("webkitAnimationStart", myStartFunction);
-            x.addEventListener("webkitAnimationIteration", myRepeatFunction);
-            x.addEventListener("webkitAnimationEnd", myEndFunction);
-
+            touchAnimate.style.animation = "mymove 4s 2";
             // Standard syntax
-            x.addEventListener("animationstart", myStartFunction);
-            x.addEventListener("animationiteration", myRepeatFunction);
-            x.addEventListener("animationend", myEndFunction);
+        }
 
-            // this is the first animation function to run when first touched
-            function myStartFunction() {
-                this.innerHTML = "Animation start event occured - You have started the annimation";
-                this.style.backgroundColor = "lightgreen";
-            }
+        // Code for Chrome, Safari and Opera
+        touchAnimate.addEventListener("webkitAnimationStart", myStartFunction);
+        touchAnimate.addEventListener("webkitAnimationIteration", myRepeatFunction);
+        touchAnimate.addEventListener("webkitAnimationEnd", myEndFunction);
 
-            // this is the second animation function to rerun after the first has run
-            function myRepeatFunction() {
-                this.innerHTML = "Animation repeat event occured - The animation was played again";
-                this.style.backgroundColor = "teal";
-            }
+        // Standard syntatouchAnimate
+        touchAnimate.addEventListener("animationstart", myStartFunction);
+        touchAnimate.addEventListener("animationiteration", myRepeatFunction);
+        touchAnimate.addEventListener("animationend", myEndFunction);
 
-            // this is the final function, to "end" the animation
-            function myEndFunction() {
-                this.innerHTML = "Animation end event occured - The animation has finished";
-                this.style.backgroundColor = "red";
-            }
-        </script>
+        // this is the first animation function to run when first touched
+        function myStartFunction() {
+            this.innerHTML = "Animation start event occured - You have started the annimation";
+            this.style.backgroundColor = "lightgreen";
+        }
 
-        <footer>
-            <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 27 May 2019</p>
-        </footer>
-    </body>
+        // this is the second animation function to rerun after the first has run
+        function myRepeatFunction() {
+            this.innerHTML = "Animation repeat event occured - The animation was played again";
+            this.style.backgroundColor = "teal";
+        }
+
+        // this is the final function, to "end" the animation
+        function myEndFunction() {
+            this.innerHTML = "Animation end event occured - The animation has finished";
+            this.style.backgroundColor = "red";
+        }
+    </script>
+
+
+
+    <h3>Transition Property</h3>
+
+    <div class="swap">
+        <a id="pic"><img src="BYUI.jpg" alt="BYU-I image">
+        </a>
+    </div>
+    <script>
+
+    </script>
+
+
+
+
+
+    <footer>
+        <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 27 May 2019</p>
+    </footer>
+</body>
+
 </html>
