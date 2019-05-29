@@ -28,8 +28,17 @@
     <p>This can be converted into an object very easily</p>
 
     <p id="jsonParse"></p>
-
-    <script>
+<script>
+    _tagId_.addEventListener('click', function(){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "json_file.txt", true);
+    if (this.readyState == 400 && this.status == 200) {
+               var myJSONParse = JSON.parse(this.responseText);
+               document.getElementById("jsonParse").innerHTML = myJSONParse.name;
+           }
+    xmlhttp.send();
+    });</script>
+<!--  <script>
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -39,7 +48,7 @@
         };
         xmlhttp.open("GET", "json_file.txt", true);
         xmlhttp.send();
-    </script>
+    </script> -->
     <p>Click on this link to run the example <a href="json_file.txt" target="_blank">JSON File Example using Parse</a></p>
 
     <h3>JSON Stringify</h3>
