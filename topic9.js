@@ -56,10 +56,10 @@ function myEndFunction() {
 
             if (myTouch.nodeType === 1) {
                 myTouch.style.opacity = 0;
-                myTouch.style.transition = 'all .6s ease-in-out';
+                myTouch.style.transition = 'all 2s ease-in-out';
             } else {
                 myTouch2.style.opacity = 0;
-                myTouch2.style.transition = 'all 0.6s ease-in-out';
+                myTouch2.style.transition = 'all 2s ease-in-out';
             }
         }, false);
     //this will end the transition
@@ -67,10 +67,10 @@ function myEndFunction() {
         function () {
             if (myTouch.nodeType === 1) {
                 myTouch.style.opacity = 1;
-                myTouch.style.transition = 'all .6s ease-in-out';
+                myTouch.style.transition = 'all 2s ease-in-out';
             } else {
                 myTouch2.style.opacity = 1;
-                myTouch2.style.transition = 'all 0.6s ease-in-out';
+                myTouch2.style.transition = 'all 2s ease-in-out';
             }
         }, false);
 }(document));
