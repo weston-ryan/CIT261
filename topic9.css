@@ -119,6 +119,7 @@ color:azure;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: inherit;
     width: 30em;
 
 }
@@ -130,7 +131,7 @@ color:azure;
 
 .swap  a img {
     opacity: 1;
-    width: 400px;
+    width: 550px;
     height: 350px;
     display: block;
     transition: all 2s ease-in-out;
