@@ -1,0 +1,115 @@
+/* * is a wildbyui referring to all elements. */
+* { margin: 10; box-sizing: border-box; }
+
+active {
+    text-align: center;
+}
+
+body {
+    font-size: 16px;
+    line-height: 32px;
+    font-family: sans-serif;
+    color: blue;
+    background-color: cornsilk;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28pt;
+    color:forestgreen;
+}
+
+h2 {
+    font-size: 20pt;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+}
+h3 {
+    color:lightgreen;
+    text-align: center;
+    padding-left: 0em;
+}
+
+h4 {
+    color:lightgreen;
+    text-align: center;
+    padding-left: 0em;
+}
+
+h5 {
+    color:lightgreen;
+    text-align: center;
+    padding-left: 0em;
+}
+audio {
+    padding-left: 0em;
+}
+
+header, main, footer {
+    margin: 1.25rem auto;
+    padding: .5rem;
+    max-width: 780px;
+}
+
+header, footer, footer a {
+    text-align: center;
+    background-color: lightgreen;
+    color: black;
+}
+
+header img {
+    width: 100;
+    height: auto;
+    float: right;
+}
+
+.box {
+    border-radius: 5px;
+    background-color: #eee;
+    padding: 20px 5px;
+}
+button {
+    color: white;
+    background-color: green;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #4791d0;
+    padding: 5px 10px 8px 10px;
+}
+button:hover {
+    background-color: lightgreen;
+    border: 1px solid #0F5897;
+}
+footer {
+    font-size: 10pt;
+}
+
+Background {
+    color:azure;
+}
+
+.byui-container {
+    height: 150px;
+    perspective: 600;
+    position: center;        ;
+    width: 150px;
+}
+.byui {
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    width: 100%;
+}
+.byui:hover {
+    transform: rotateY(180deg);
+}
+.byui .side {
+    backface-visibility: hidden;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.byui .back {
+    transform: rotateY(180deg);
+}
