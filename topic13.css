@@ -95,25 +95,21 @@ background-repeat: no-repeat;
 background-position: center;
 padding-top:95px;
 margin-bottom:10px;
--webkit-animation-duration: 2s;
-animation-duration: 2s;
+-webkit-animation-duration: 3s;
+animation-duration: 3s;
 -webkit-animation-fill-mode: both;
 animation-fill-mode: both;
 }
 
-@-webkit-keyframes bounce {
-0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
-40% {-webkit-transform: translateY(-30px);}
-60% {-webkit-transform: translateY(-15px);}
-}
 
 @keyframes bounce {
 0% { -webkit-transform: translateY(-205px); -webkit-animation-timing-function: ease-in; }
-
-40% { -webkit-transform: translateY(-100px); -webkit-animation-timing-function: ease-in; }
+20% { -webkit-transform: translateY(-170px); -webkit-animation-timing-function: ease-in; }
+40% { -webkit-transform: translateY(-150px); -webkit-animation-timing-function: ease-in; }
 65% { -webkit-transform: translateY(-52px); -webkit-animation-timing-function: ease-in; }
 82% { -webkit-transform: translateY(-25px); -webkit-animation-timing-function: ease-in; }
 92% { -webkit-transform: translateY(-12px); -webkit-animation-timing-function: ease-in; }
+98% { -webkit-transform: translateY(-5px); -webkit-animation-timing-function: ease-in; }
 
 25%, 55%, 75%, 87%, 97%, 100% { -webkit-transform: translateY(0px); -webkit-animation-timing-function: ease-out; }
 }
