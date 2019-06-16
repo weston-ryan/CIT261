@@ -45,8 +45,22 @@
     <div id="result"></div>
 
 
+    <h3><font color="red">Creating an Array list of Objects</font></h3>
+    <p>Here is the information you entered at the prompt.</p>
+    <p>This is an array list of objects that you created. </p>
+    <script>
+    var repeat, songs = [];
+
+        while(repeat !== 'n'){
+            songs.push(prompt('What is your favorite song?'));
+            repeat = prompt('Would you like to add another song to the list? y/n');
+            document.write(songs + "<br />");
+        }
+    </script>
+
+
 <footer>
-<p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 11 May 2019</p>
+<p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 15 June 2019</p>
 </footer>
 </body>
 </html>
