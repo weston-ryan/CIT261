@@ -18,3 +18,23 @@ loadXMLDoc();
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
+
+/*
+//creating another function trying to do a calculation
+function createSavings() {
+    var i1 = document.getElementById('paycheck').value;
+    var i2 = document.getElementById('otherIncome').value;
+    var e1 = document.getElementById('utilities').value;
+    var e2 = document.getElementById('mortgage').value;
+    var e3 = document.getElementById('insurance').value;
+    var intemCost = document.getElementById('itemCost');
+    //I don't know how to grab just the intrest rate for this
+    var intRate = document.getElementById('KeyMarketRates').value;
+    var total = (i1 + i2) - (e1 + e2 + e3);
+    var manyMonths = itemCost / total;
+
+if (oper !== "undefined") {
+    document.getElementById("result").innerHTML = "You need to save " + manyMonths + "months to afford the" itemWanted;
+}
+}
+*/
