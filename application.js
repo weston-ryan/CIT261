@@ -29,7 +29,7 @@ function createSavings() {
     var e3 = document.getElementById('insurance').value;
     var intemCost = document.getElementById('itemCost');
     //I don't know how to grab just the intrest rate for this
-    var intRate = document.getElementById('KeyMarketRates').value;
+    var intRate = document.getElementById('Prime').value;
     var total = (i1 + i2) - (e1 + e2 + e3);
     var manyMonths = itemCost / total;
 
