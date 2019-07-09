@@ -26,20 +26,20 @@ function createSavings() {
 
 //creating another function trying to do a calculation
 function createSavings() {
-    var i1 = document.getElementById('paycheck').value;
-    var i2 = document.getElementById('otherIncome').value;
-    var e1 = document.getElementById('utilities').value;
-    var e2 = document.getElementById('mortgage').value;
-    var e3 = document.getElementById('insurance').value;
-    var intemCost = document.getElementById('itemCost');
+    var i1 = document.getElementById("paycheck").value;
+    var i2 = document.getElementById("otherIncome").value;
+    var e1 = document.getElementById("utilities").value;
+    var e2 = document.getElementById("mortgage").value;
+    var e3 = document.getElementById("insurance").value;
+    var intemCost = document.getElementById("itemCost");
 
-    //var intRate = document.getElementById('Prime').value;
+    //Use an API and grab the interest rate using a child element
     var ratesRow = document.getElementsByClassName("ratesRow");
     var parsedIntRate = ratesRow[0].children[1].innerText;
     var intRate = parsedIntRate.replace("%","");
 
-    // this part will get the value out of a select list
-    var itemWanted = document.getElementById("itemWanted");
+    //  get the value out of a select list
+    var itemWanted = document.getElementById("itemWanted").value;
 
     //var total = (i1 + i2) - (e1 + e2 + e3);
     var manyMonths = itemCost / ((i1 + i2) - (e1 + e2 + e3));
