@@ -8,41 +8,32 @@ loadXMLDoc();
 
 
 
-
-/*
-function createSavings() {
-    if (typeof(Storage) !== "undefined") {
-        if (sessionStorage.clickcount) {
-            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
-        } else {
-            sessionStorage.clickcount = 1;
-        }
-        document.getElementById("result").innerHTML = "You need to save  " + sessionStorage.clickcount + " months to afford the " + itemWanted;
-    } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-    }
-}
-*/
-
 //creating another function trying to do a calculation
 function createSavings() {
-    var i1 = document.getElementById("paycheck").value;
-    var i2 = document.getElementById("otherIncome").value;
-    var e1 = document.getElementById("utilities").value;
-    var e2 = document.getElementById("mortgage").value;
-    var e3 = document.getElementById("insurance").value;
-    var intemCost = document.getElementById("itemCost");
+    var paycheckAmt = document.getElementById("paycheck").value;
+    var otherIncomeAmt = document.getElementById("otherIncome").value;
+    var utilitiesAmt = document.getElementById("utilities").value;
+    var mortgageAmt = document.getElementById("mortgage").value;
+    var insuranceAmt = document.getElementById("insurance").value;
+    var itemCostAmt = document.getElementById("itemCost").value;
 
     //Use an API and grab the interest rate using a child element
     var ratesRow = document.getElementsByClassName("ratesRow");
     var parsedIntRate = ratesRow[0].children[1].innerText;
     var intRate = parsedIntRate.replace("%","");
 
+/*
+    //Turn interest rate string to a variable
+    var parsed = parseInt(x, base);
+    if (isNaN(parsed)) { return 0 }
+    return parsed * 100;
+*/
     //  get the value out of a select list
     var itemWanted = document.getElementById("itemWanted").value;
 
     //var total = (i1 + i2) - (e1 + e2 + e3);
-    var manyMonths = itemCost / ((i1 + i2) - (e1 + e2 + e3));
+    var manyMonths = +itemCostAmt / ((+paycheckAmt + +otherIncomeAmt) - (+mortgageAmt + +utilitiesAmt + +insuranceAmt));
+    console.log(manyMonths);
     console.log(intRate);
 
 
@@ -53,7 +44,7 @@ function createSavings() {
 
 
     // this part hides/shows the cantAffordThis.giff
-    var x = document.getElementById("cantAffordThis.gif");
+    var x = document.getElementById("gifSection");
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
@@ -61,3 +52,11 @@ function createSavings() {
     }
 }
 
+//parseInt
+
+function myFunction(){
+    // Code for Safari 3.1 to 6.0
+    document.getElementById("myHover").style.WebkitTransitionProperty = "width, height";
+    // Standard syntax
+    document.getElementById("myHover").style.transitionProperty = "width, height";
+}
