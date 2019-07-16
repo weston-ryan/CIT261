@@ -62,13 +62,18 @@
 
             <button type="button" value="submit" onmousedown="createSavings()">Calculate Savings Length</button>
         </form>
+        <div id="result"></div>
+        <div id="gifSection" style="display:none;">
+            <img src="cantAffordThis.gif" height="100px;">
+        </div>
+
 
         <h3>Current Interest Rates API</h3>
+        <P>The "Prime" rate is pulled from the API and included in the calculation</P>
 
         <container>
         <div id="KeyMarketRates"></div>
-            <div id="result"></div>
-            <div id="cantAffordThis.gif"></div>
+
             <figure>
                <!-- <img src="cantAffordThis.gif" height="200" width="300" alt="Static Image" data-alt="cantAffordThis.gif">  -->
             </figure>
@@ -81,13 +86,19 @@
         </audio><br>
 
         <h3>Inspirational Video for Closing</h3>
+        <p>Some motivational Art to bring the spirit</p>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/IQCb6HMqwbk" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/IQCb6HMqwbk" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+        <style>
+            img:hover {
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+        </style>
+        <img src="weatherPine.jpg" alt="Weather Pine" width="775" height="100">
 
         <footer>
-            <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 13 July, 2019</p>
+            <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 9 July, 2019</p>
         </footer>
     </body>
 </html>
