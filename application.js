@@ -32,7 +32,7 @@ function createSavings() {
     var itemWanted = document.getElementById("itemWanted").value;
 
     //var total = (i1 + i2) - (e1 + e2 + e3);
-    var manyMonths = +itemCostAmt / ((+paycheckAmt + +otherIncomeAmt) - (+mortgageAmt + +utilitiesAmt + +insuranceAmt));
+    var manyMonths = Math.round(+itemCostAmt / ((+paycheckAmt + +otherIncomeAmt) - (+mortgageAmt + +utilitiesAmt + +insuranceAmt)));
     console.log(manyMonths);
     console.log(intRate);
 
