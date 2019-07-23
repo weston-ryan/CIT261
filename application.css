@@ -68,18 +68,7 @@ border-radius: 5px;
 background-color: #eee;
 padding: 20px 5px;
 }
-button {
-color: white;
-background-color: green;
-text-align: center;
-border-radius: 5px;
-border: 1px solid #4791d0;
-padding: 5px 10px 8px 10px;
-}
-button:hover {
-background-color: lightgreen;
-border: 1px solid #0F5897;
-}
+
 footer {
 font-size: 10pt;
 }
@@ -97,3 +86,161 @@ color:azure;
     left: 0;
     right: 0;
 }
+
+myHover {
+    border: 1px solid darkgreen;
+    border-style: groove;
+    background-color: wheat;
+    text-align: center;
+    width: 270px;
+    height: 200px;
+    overflow: auto;
+    -webkit-transition: all 2s;
+    /* Safari 3.1 to 6.0 */
+    transition: all 2s;
+    border-radius: 20px;
+}
+
+#myHover:hover {
+    background-color: mediumblue;
+    text-align: center;
+    width: 570px;
+    height: 500px;
+    padding: 100px;
+    border-radius: 600px;
+}
+
+
+
+
+/*   Annimate the button    */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
+  * {
+    box-sizing: border-box;
+}
+/*body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFE8A3;
+    font-family: 'Montserrat', sans-serif;
+}*/
+html, body {
+    height: 100%;
+}
+
+
+
+/*    -----------  */
+
+button {
+    color: white;
+    background-color: green;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #4791d0;
+    padding: 5px 10px 8px 10px;
+    box-shadow: 1px 0px 1px #203891, 0px 1px 1px #3852b1, 2px 1px 1px #203891, 1px 2px 1px #3852b1, 3px 2px 1px #203891, 2px 3px 1px #3852b1, 4px 3px 1px #203891, 3px 4px 1px #3852b1, 5px 4px 1px #203891, 4px 5px 1px #3852b1, 6px 5px 1px #203891;
+}
+
+button:active {
+    box-shadow: 1px 0px 1px #203891, 0px 1px 1px #3852b1, 2px 1px 1px #203891, 1px 2px 1px #3852b1, 3px 2px 1px #203891;
+    transform: translate(3px, 3px);
+}
+
+button:hover {
+    background-color: lightgreen;
+    border: 1px solid Black;
+}
+
+/*    -----------  */
+
+
+
+
+
+
+button {
+    border: 5px solid transparent;
+    background: #AED6D1;
+    color: blue;
+    border-radius: 40px;
+    padding: 15px 30px;
+    overflow: hidden;
+    width: 300px;
+    transition:
+        all        .75s,
+        border     0.5s 1.2s,
+        box-shadow 0.3s 1.5s;
+    white-space: nowrap;
+    text-indent: 23px;
+    font-weight: bold;
+    span {
+        display: inline-block;
+        transform: translateX(300px);
+        font-weight: normal;
+        opacity: 0;
+        transition:
+            opacity 0.1s 0.5s,
+            transform 0.4s 0.5s;
+    }
+    &:hover {
+        text-indent: 0;
+        background: #55706D;
+        color: #FFE8A3;
+        width: 250px;
+        border: 10px solid blue;
+        box-shadow: 3px 3px 2px rgba(black, 0.15);
+        span {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
+
+
+$offset : -90px;
+$count : 40;
+$duration : 0.3;
+
+
+@keyframes wave {
+    from { transform : translateY(0); color: white; }
+    to   { transform : translateY( $offset ); }
+}
+
+.wavetext {
+    margin-top : 10em;
+    text-align : center;
+}
+
+
+.wavetext span {
+    display: inline-block;
+    font-family : "Fredoka One", sans-serif;
+    font-size : 70px;
+
+    animation-duration: #{$duration}s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@for $i from 0 to $count {
+    .wavetext :nth-child( #{$count}n + #{$i} ) {
+        animation-delay :
+            -#{($count - $i) * 2 * $duration / $count }s;
+
+
+        color: rgba(100+$i * 20 % 155, 10, 100+ $i * 40 % 55, 1);
+    }
+}
+
+
