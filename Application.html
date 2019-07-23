@@ -1,105 +1,128 @@
 <!-- CIT 261 Template page-->
 <html>
-    <head>
-        <title>Final Application</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="application.css" type="text/css" rel="stylesheet">
-        <script src="application.js"></script>
 
-    </head>
-    <body>
-        <header>
-            <h1>Ryan Weston</h1>
+<head>
+    <title>Final Application</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="application.css" type="text/css" rel="stylesheet">
+    <script src="application.js"></script>
 
-        </header>
+</head>
 
-        <ul id="navlist">
-            <li id="active"><a href="index.html" id="current">Home - Assignment Portal</a></li>
-        </ul>
-        <h2>  Can I afford It </h2>
+<body>
+    <header>
+        <h1>Ryan Weston</h1>
 
+    </header>
 
-        <h3> Find out if you can afford what you want to buy </h3>
-        <p id="affordItem"> Enter some basic information, and find out how long it will take you to save enough money to buy this item without a loan</p>
-        <form name="canIAffordIt">
-
-            <!---  Drop down selection list --->
-            <h3>What Item Are You Longing For</h3>
-            <label>Item Wanted</label>
-            <select id="itemWanted" name="WantedItemList">
-                <option value="SelectItem">Select Item</option>
-                <option value="Appliance">Appliance</option>
-                <option value="Automobile">Automobile</option>
-                <option value="ATV">ATV</option>
-                <option value="Camper">Camper</option>
-                <option value="Computer">Computer</option>
-                <option value="Electronics">Electronics</option>
-                <option value="House">House</option>
-                <option value="Marine Equipment">Marine Equipment</option>
-                <option value="Repairs">Repairs</option>
-                <option value="Other">Other</option>
-            </select><br>
-            <label>Item Cost</label>
-            <input type="text" id="itemCost" name="itemCost" placeholder="Enter $ Amount"/><br>
+    <ul id="navlist">
+        <li id="active"><a href="index.html" id="current">Home - Assignment Portal</a></li>
+    </ul>
+    <h2> Can I afford It </h2>
 
 
-            <h3>Enter Your Income</h3>
-            <label>Monthly Paycheck (Net)</label>
-            <input type="text" id="paycheck" name="paycheck" placeholder="Enter $ Amount"/><br>
-            <label>Other Income</label>
-            <input type="text" id="otherIncome" name="otherIncome" placeholder="Enter $ Amount"/><br>
+    <h3> Find out if you can afford what you want to buy </h3>
+    <p id="affordItem"> Enter some basic information, and find out how long it will take you to save enough money to buy this item without a loan</p>
+    <form name="canIAffordIt">
+
+        <!---  Drop down selection list --->
+        <h3>What Item Are You Longing For</h3>
+        <label>Item Wanted</label>
+        <select id="itemWanted" name="WantedItemList">
+            <option value="SelectItem">Select Item</option>
+            <option value="Appliance">Appliance</option>
+            <option value="Automobile">Automobile</option>
+            <option value="ATV">ATV</option>
+            <option value="Camper">Camper</option>
+            <option value="Computer">Computer</option>
+            <option value="Electronics">Electronics</option>
+            <option value="House">House</option>
+            <option value="Marine Equipment">Marine Equipment</option>
+            <option value="Repairs">Repairs</option>
+            <option value="Other">Other</option>
+        </select><br>
+        <label>Item Cost</label>
+        <input type="text" id="itemCost" name="itemCost" placeholder="Enter $ Amount" /><br>
 
 
-            <h3>Enter Current Expenses</h3>
-            <label>Utilities</label>
-            <input type="text" id="utilities" name="utilities" placeholder="Enter $ Amount"/><br>
-            <label>Mortgage</label>
-            <input type="text" id="mortgage" name="mortgage" placeholder="Enter $ Amount"/><br>
-            <label>Insurance</label>
-            <input type="text" id="insurance" name="insurance" placeholder="Enter $ Amount"/><br>
+        <h3>Enter Your Income</h3>
+        <label>Monthly Paycheck (Net)</label>
+        <input type="text" id="paycheck" name="paycheck" placeholder="Enter $ Amount" /><br>
+        <label>Other Income</label>
+        <input type="text" id="otherIncome" name="otherIncome" placeholder="Enter $ Amount" /><br>
 
 
-            <button type="button" value="submit" onmousedown="createSavings()">Calculate Savings Length</button>
-        </form>
-        <div id="result"></div>
-        <div id="gifSection" style="display:none;">
-            <img src="cantAffordThis.gif" height="100px;">
-        </div>
+        <h3>Enter Current Expenses</h3>
+        <label>Utilities</label>
+        <input type="text" id="utilities" name="utilities" placeholder="Enter $ Amount" /><br>
+        <label>Mortgage</label>
+        <input type="text" id="mortgage" name="mortgage" placeholder="Enter $ Amount" /><br>
+        <label>Insurance</label>
+        <input type="text" id="insurance" name="insurance" placeholder="Enter $ Amount" /><br>
+    </form>
 
 
-        <h3>Current Interest Rates API</h3>
-        <p>The "Prime" rate is pulled from the API and shown below.</p><br>
-        <p>If you take out a loan, this is the current interest rate:</p>
 
-        <container>
+
+
+<!--  Button -->
+        <button type="button" value="submit" onmousedown="createSavings()">Calculate Savings Length<span>Begins!</span></button>
+<!-- Added a span above for annimation -->
+
+
+
+
+
+
+<!-- Display the result after the button is activated -->
+    <div id="result"></div>
+    <div id="gifSection" style="display:none;">
+        <img src="cantAffordThis.gif" height="100px;">
+    </div>
+
+
+<!-- Interest rates API section -->
+    <!--  Text Wave title -->
+    <div class="wavetext"></div>
+    
+    <h3>Current Interest Rates API</h3>
+    <p>The "Prime" rate is pulled from the API and shown below.</p><br>
+    <p>If you take out a loan, this is the current interest rate:</p>
+
+    <container>
         <div id="KeyMarketRates"></div>
-
-            <figure>
-               <!-- <img src="cantAffordThis.gif" height="200" width="300" alt="Static Image" data-alt="cantAffordThis.gif">  -->
-            </figure>
-
-        </container>
+    </container>
 
 
-        <audio controls autoplay>
-            <source src="1-11%20Love%20Dance.mp3" type="audio/mpeg">
-        </audio><br>
 
-        <h3>Inspirational Video for Closing</h3>
-        <p>Some motivational Art to bring the spirit</p>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/IQCb6HMqwbk" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-        <style>
-            img:hover {
-                -webkit-transform: scaleX(-1);
-                transform: scaleX(-1);
-            }
-        </style>
-        <img src="weatherPine.jpg" alt="Weather Pine" width="775" height="100">
+    <audio controls autoplay>
+        <source src="1-11%20Love%20Dance.mp3" type="audio/mpeg">
+    </audio><br>
 
-        <footer>
-            <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 9 July, 2019</p>
-        </footer>
-    </body>
+
+
+
+    <h3>Inspirational Video for Closing</h3>
+    <p>Some motivational Art to bring the spirit</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IQCb6HMqwbk" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+
+
+
+    <style>
+        img:hover {
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
+    </style>
+    <img src="weatherPine.jpg" alt="Weather Pine" width="775" height="100">
+
+    <footer>
+        <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 23 July, 2019</p>
+    </footer>
+</body>
+
 </html>
