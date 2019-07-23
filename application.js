@@ -1,3 +1,12 @@
+var text = "Can I afford it?";
+
+for(var i in text) { 
+  if(text[i] === " ") {
+    $(".wavetext").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".wavetext").append( $("<span>").text(text[i]) ); 
+  }
+}
 //API link:
 //https://www.commercialloandirect.com/rates-api.html
 
@@ -59,14 +68,4 @@ function myFunction(){
     document.getElementById("myHover").style.WebkitTransitionProperty = "width, height";
     // Standard syntax
     document.getElementById("myHover").style.transitionProperty = "width, height";
-}
-
-var text = "Current Interest Rate API";
-
-for(var i in text) {
-    if(text[i] === " ") {
-        $(".wavetext").append( $("<span>").html("&nbsp;") );
-    } else {
-        $(".wavetext").append( $("<span>").text(text[i]) );
-    }
 }
