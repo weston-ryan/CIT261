@@ -22,7 +22,7 @@ function createSavings() {
     var parsedIntRate = ratesRow[0].children[1].innerText;
     var intRate = parsedIntRate.replace("%","");
 
-/*
+    /*
     //Turn interest rate string to a variable
     var parsed = parseInt(x, base);
     if (isNaN(parsed)) { return 0 }
@@ -59,4 +59,14 @@ function myFunction(){
     document.getElementById("myHover").style.WebkitTransitionProperty = "width, height";
     // Standard syntax
     document.getElementById("myHover").style.transitionProperty = "width, height";
+}
+
+var text = "Current Interest Rate API";
+
+for(var i in text) {
+    if(text[i] === " ") {
+        $(".wavetext").append( $("<span>").html("&nbsp;") );
+    } else {
+        $(".wavetext").append( $("<span>").text(text[i]) );
+    }
 }
