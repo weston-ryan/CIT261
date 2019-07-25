@@ -2,79 +2,80 @@
 * { margin: 10; box-sizing: border-box; }
 
 active {
-text-align: center;
+    text-align: center;
 }
 
 body {
-font-size: 16px;
-line-height: 32px;
-font-family: sans-serif;
-color: blue;
-background-color: cornsilk;
-text-align: center;
+    font-size: 16px;
+    line-height: 32px;
+    font-family: sans-serif;
+    color: blue;
+  /* background-color: cornsilk; */
+    background-color: black;
+    text-align: center;
 }
 
 h1 {
-font-size: 28pt;
-color:forestgreen;
+    font-size: 28pt;
+    color:forestgreen;
 }
 
 h2 {
-font-size: 20pt;
-text-align: center;
-border-bottom: 1px solid #bbb;
+    font-size: 20pt;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
 }
 h3 {
-color:lightgreen;
-text-align: center;
-padding-left: 0em;
+    color:lightgreen;
+    text-align: center;
+    padding-left: 0em;
 }
 
 h4 {
-color:lightgreen;
-text-align: center;
-padding-left: 0em;
+    color:lightgreen;
+    text-align: center;
+    padding-left: 0em;
 }
 
 h5 {
-color:lightgreen;
-text-align: center;
-padding-left: 0em;
+    color:lightgreen;
+    text-align: center;
+    padding-left: 0em;
 }
 audio {
-padding-left: 0em;
+    padding-left: 0em;
 }
 
 header, main, footer {
-margin: 1.25rem auto;
-padding: .5rem;
-max-width: 780px;
+    margin: 1.25rem auto;
+    padding: .5rem;
+    max-width: 780px;
 }
 
 header, footer, footer a {
-text-align: center;
-background-color: lightgreen;
-color: black;
+    text-align: center;
+    background-color: lightgreen;
+    color: black;
 }
 
 header img {
-width: 100;
-height: auto;
-float: right;
+    width: 100;
+    height: auto;
+    float: right;
 }
 
 .box {
-border-radius: 5px;
-background-color: #eee;
-padding: 20px 5px;
+    border-radius: 5px;
+    background-color: #eee;
+    padding: 20px 5px;
 }
 
 footer {
-font-size: 10pt;
+    font-size: 10pt;
 }
 
 Background {
-color:azure;
+    color:azure;
 }
 
 .container {
@@ -116,15 +117,15 @@ myHover {
 /*   Annimate the button    */
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
-  * {
+* {
     box-sizing: border-box;
 }
 /*body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #FFE8A3;
-    font-family: 'Montserrat', sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #FFE8A3;
+font-family: 'Montserrat', sans-serif;
 }*/
 html, body {
     height: 100%;
@@ -202,45 +203,82 @@ button {
 
 
 
-@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
 
 
-$offset : -90px;
-$count : 40;
-$duration : 0.3;
 
-
-@keyframes wave {
-    from { transform : translateY(0); color: white; }
-    to   { transform : translateY( $offset ); }
+/* ------------------- */
+.text-effect {
+    overflow: hidden;
+    position: relative;
+    -webkit-filter: contrast(110%) brightness(190%);
+    filter: contrast(110%) brightness(190%);
 }
 
-.wavetext {
-    margin-top : 10em;
-    text-align : center;
+.neon {
+    position: relative;
+    background: black;
+    color: transparent;
+}
+.neon::before, .neon::after {
+    content: attr(data-text);
+    color: white;
+    -webkit-filter: blur(0.02em);
+    filter: blur(0.02em);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.neon::after {
+    mix-blend-mode: difference;
 }
 
-
-.wavetext span {
-    display: inline-block;
-    font-family : "Fredoka One", sans-serif;
-    font-size : 70px;
-
-    animation-duration: #{$duration}s;
-    animation-name: wave;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+.gradient,
+.spotlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: 10;
 }
 
+.gradient {
+    background: linear-gradient(45deg, red, blue);
+    mix-blend-mode: multiply;
+}
 
-@for $i from 0 to $count {
-    .wavetext :nth-child( #{$count}n + #{$i} ) {
-        animation-delay :
-            -#{($count - $i) * 2 * $duration / $count }s;
+.spotlight {
+    -webkit-animation: light 5s infinite linear;
+    animation: light 5s infinite linear;
+    background: radial-gradient(circle, white, transparent 25%) 0 0/25% 25%, radial-gradient(circle, white, black 25%) 50% 50%/12.5% 12.5%;
+    top: -100%;
+    left: -100%;
+    mix-blend-mode: color-dodge;
+}
 
-
-        color: rgba(100+$i * 20 % 155, 10, 100+ $i * 40 % 55, 1);
+@-webkit-keyframes light {
+    100% {
+        -webkit-transform: translate3d(50%, 50%, 0);
+        transform: translate3d(50%, 50%, 0);
     }
 }
 
+@keyframes light {
+    100% {
+        -webkit-transform: translate3d(50%, 50%, 0);
+        transform: translate3d(50%, 50%, 0);
+    }
+}
+.neon {
+    font: 700 220px 'Lato', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+.neon:focus {
+    outline: none;
+    border: 1px dotted white;
+}
 
