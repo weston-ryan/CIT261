@@ -1,4 +1,5 @@
 <!-- CIT 261 Template page-->
+
 <html>
 
     <head>
@@ -11,7 +12,7 @@
     </head>
 
     <body>
-        <header>
+    <!--    <header>
             <h1>Ryan Weston</h1>
 
         </header>
@@ -19,8 +20,20 @@
         <ul id="navlist">
             <li id="active"><a href="index.html" id="current">Home - Assignment Portal</a></li>
         </ul>
+
+    -->
+
         <!--  Text Wave title -->
         <div class="wavetext"></div>
+
+
+
+        <div class="text-effect">
+            <h1 class="neon" data-text="Can I afford It ?" contenteditable>Can I afford It?  </h1>
+            <div class="gradient"></div>
+            <div class="spotlight"></div>
+        </div>
+
 
 
 
@@ -47,13 +60,11 @@
             <label>Item Cost</label>
             <input type="text" id="itemCost" name="itemCost" placeholder="Enter $ Amount" /><br>
 
-
             <h3>Enter Your Income</h3>
             <label>Monthly Paycheck (Net)</label>
             <input type="text" id="paycheck" name="paycheck" placeholder="Enter $ Amount" /><br>
             <label>Other Income</label>
             <input type="text" id="otherIncome" name="otherIncome" placeholder="Enter $ Amount" /><br>
-
 
             <h3>Enter Current Expenses</h3>
             <label>Utilities</label>
@@ -64,28 +75,17 @@
             <input type="text" id="insurance" name="insurance" placeholder="Enter $ Amount" /><br>
         </form>
 
-
-
-
-
         <!--  Button -->
         <button type="button" value="submit" onmousedown="createSavings()">Calculate Savings Length<span>Begins!</span></button>
         <!-- Added a span above for annimation -->
 
-
-
-
-
-
         <!-- Display the result after the button is activated -->
         <div id="result"></div>
         <div id="gifSection" style="display:none;">
-            <img src="cantAffordThis.gif" height="100px;">
+            <img src="cantAffordThis.gif" height="200px;">
         </div>
 
-
         <!-- Interest rates API section -->
-
 
         <h3>Current Interest Rates API</h3>
         <p>The "Prime" rate is pulled from the API and shown below.</p><br>
@@ -95,23 +95,14 @@
             <div id="KeyMarketRates"></div>
         </container>
 
-
-
-
         <audio controls autoplay>
             <source src="1-11%20Love%20Dance.mp3" type="audio/mpeg">
         </audio><br>
-
-
-
 
         <h3>Inspirational Video for Closing</h3>
         <p>Some motivational Art to bring the spirit</p>
 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/IQCb6HMqwbk" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-
-
-
 
         <style>
             img:hover {
@@ -119,12 +110,18 @@
                 transform: scaleX(-1);
             }
         </style>
-        <img src="weatherPine.jpg" alt="Weather Pine" width="775" height="100">
+
 
         <footer>
-            <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 23 July, 2019</p>
+            <p>Copyright &copy; 2019 Ryan Weston &nbsp; - &nbsp; Last updated: 25 July, 2019</p>
         </footer>
     </body>
 
 </html>
 
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+</script>
