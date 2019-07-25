@@ -1,12 +1,5 @@
-var text = "Can I afford it?";
 
-for(var i in text) { 
-  if(text[i] === " ") {
-    $(".wavetext").append( $("<span>").html("&nbsp;") ); 
-  } else {  
-    $(".wavetext").append( $("<span>").text(text[i]) ); 
-  }
-}
+
 //API link:
 //https://www.commercialloandirect.com/rates-api.html
 
@@ -46,7 +39,7 @@ function createSavings() {
     console.log(intRate);
 
 
-
+    // the result to be displayed below the "button"
     var resultText = "You need to save " + manyMonths + " months to afford the " + itemWanted;
     document.getElementById("result").innerHTML = resultText
 
@@ -69,3 +62,10 @@ function myFunction(){
     // Standard syntax
     document.getElementById("myHover").style.transitionProperty = "width, height";
 }
+
+
+
+// Neon Text
+$('[data-text]').on('keyup', function(){
+    $(this).attr('data-text', $(this).text());
+});
